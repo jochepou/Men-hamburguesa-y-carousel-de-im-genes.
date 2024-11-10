@@ -1,27 +1,87 @@
-.deLado{
-    float: left;
-    width: auto;
+:root{
+--imagenes: 4; /* variable que indica la cantidad de imagenes del carousel */
 }
 
-.centrado{
+.center-container {
     display: flex;
     justify-content: center;
-}
-
-.galeria{
-    margin: 5px;
-    border: 1px solid gray;
-    float: left;
-    width: 33vw;
-}
-
-div.galeria img{
-    width: 100%;
+    align-items: center;
     height: auto;
+    width: 100%;
+    padding-top: 50px; /* Añade un margen superior para un mejor centrado */
+    padding-bottom: 50px; /* Espacio antes del footer */
 }
 
-.descripcion{
-    padding: 15px;
-    text-align: center;
+.container-carousel{ /* Div principal */
+    position: relative;
+    height: 300px;
+    width: 500px;
+    background-color: #e0e0e0;
+    /*border: 15px solid black;*/
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.carouseles{  /* Div secundario */
+    width: calc(115% * var(--imagenes)); /* ancho para contener todas las im{agenes */
+    height: 100%;
+    display: flex;
+    /*border: 5px solid red;*/
+
+    /* transform: translateX(calc(5 *(-100% / var(--imagenes)))); */
+}
+
+.slider-section{
+    width: calc(100% / var(--imagenes)); /* 100% dividido la cantidad de imagenes */; 
+    /*border: 5px solid green;*/
     
+}
+
+/* ancho de cada imagen  */
+.slider-section img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    border-radius: 15px;
+
+}
+
+.btn-left,
+.btn-right {
+    display:flex;
+    position:absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: black;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color:#ffffff81;
+    transform: translate(0, -50%);
+    transition: .5s ease;
+    user-select: none;
+
+}
+
+
+.btn-left:hover,
+.btn-right:hover{
+    background-color: #333333d4;
+    color: #fff;
+
+}
+
+.btn-left{
+    left:10px;
+}
+
+.btn-right{
+    right: 10px;
+}
+
+.subtitulo{
+    margin: 15px;
+    padding: 0;
+
 }

@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan, el desarrollador</title>
-    <link rel="shorcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/styles/contacto.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu hamburguesa y Carrousel</title>
+  <link rel="shorcut icon" href="favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/styles/contacto.css">
 </head>
 <body>
   <header>
-    <h1>Juan, el desarrollador</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="preferencias.html">Preferencias</a></li>
-            <li><a href="audiovisuales.html">Audiovisuales</a></li>
-            <li> <a class="active" href="contacto.html">Contacto</a></li>
-        </ul>
+        
+    <img class="logo" src="/assets/descarga.png" alt="Logo">
+
+    <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+    
+    <nav id="nav" class="nav">
+      <button id="cerrar" class="cerrar-menu"><i class="bi bi-x-square"></i></button>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="preferencias.html">Preferencias</a></li>
+        <li><a href="audiovisuales.html">Carrousel</a></li>
+        <li> <a class="active" href="contacto.html">Contacto</a></li>
+      </ul>
     </nav>
   </header>
 
-    <div class="contenedor">
-        <form>
-            <label for="nombre">Nombre: </label>
-            <input type="text" id="nombre" name="nombre" placeholder="Escribi aqui tu nombre" required minlength="3">
-            <label for="mail">Email: </label>
-            <input type="email" id="mail" name="mail" placeholder="Escribi aqui tu mail" required>
-            <label for="pais">País: </label>
-            <select name="pais" id="pais">
-                <option value="Argentina">Argentina</option>
-                <option value="Uruguay">Uruguay</option>
-                <option value="Brasil">Brasil</option>
-                <option value="Chile">Chile</option>
-                <option value="Colombia">Colombia</option>
-            </select>
-            <label for="comentario">Comentario: </label>
-            <textarea name="comentario" id="comentario" placeholder="Escribí quí tu comentario"></textarea>
+  <h2>Formulario de contacto</h2>
+  <hr>
 
-            <input type="submit" value="Enviar">
-        </form>
+  <div class="contenedor">
+    <form>
+      <label for="nombre">Nombre: </label>
+      <input type="text" id="nombre" name="nombre" placeholder="Escribi aqui tu nombre" required minlength="3">
+      <label for="mail">Email: </label>
+      <input type="email" id="mail" name="mail" placeholder="Escribi aqui tu mail" required>
+      <label for="pais">País: </label>
+      <select name="pais" id="pais">
+        <option value="Argentina">Argentina</option>
+        <option value="Uruguay">Uruguay</option>
+        <option value="Brasil">Brasil</option>
+        <option value="Chile">Chile</option>
+        <option value="Colombia">Colombia</option>
+      </select>
+      <label for="comentario">Comentario: </label>
+      <textarea name="comentario" id="comentario" placeholder="Escribí quí tu comentario"></textarea>
 
-    </div>
+      <input type="submit" value="Enviar">
+    </form>
 
-
+  </div>
 
   <footer class="footer">
-    <p>Derechos reservados &copy;2023</p>
+    <p>Derechos reservados &copy;2024</p>
   </footer>
 
 </body>
+<script src="/hamburguesaYCarrousel.js"></script>
 </html>
